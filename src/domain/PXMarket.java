@@ -3,7 +3,7 @@ package domain;
 /**
  * @author Arthur on 2021/9/8
  */
-public class Market {
+public class PXMarket {
 
     // 烤肉組合包
     public static void barbecueItemSet(){

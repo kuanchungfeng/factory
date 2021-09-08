@@ -1,4 +1,4 @@
-import domain.Market;
+import domain.PXMarket;
 
 /**
  *
@@ -8,7 +8,7 @@ public class FactoryApplication {
 
     //程式進入點
     public static void main(String[] args) {
-        Market.barbecueItemSet();
+        PXMarket.barbecueItemSet();
         System.out.println("回家開烤");
     }
 }
