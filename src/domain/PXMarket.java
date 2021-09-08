@@ -1,5 +1,6 @@
 package domain;
 
+import abstractFactory.DomesticFactory;
 import factoryMethod.*;
 
 /**
@@ -9,26 +10,23 @@ public class PXMarket {
 
     // 烤肉組合包
     public static void barbecueItemSet(){
+        DomesticFactory domesticFactory = new DomesticFactory();
         buy("烤肉架");
         buy("木炭");
-        BeefFactory beefFactory = new BeefFactory();
-        buy(callFactory(beefFactory).getName());
-        ChickenFactory chickenFactory = new ChickenFactory();
-        buy(callFactory(chickenFactory).getName());
-        PorkFactory porkFactory = new PorkFactory();
-        buy(callFactory(porkFactory).getName());
+        buy(domesticFactory.supplyBeef().getName());
+        buy(domesticFactory.supplyChicken().getName());
+        buy(domesticFactory.supplyPork().getName());
+
     }
 
     public static void buyFish(){
-        FishFactory fishFactory = new FishFactory();
-        buy(callFactory(fishFactory).getName());
+        DomesticFactory domesticFactory = new DomesticFactory();
+        buy(domesticFactory.supplyFish().getName());
+
     }
 
     public static void buy(String item){
         System.out.println("買到"+item+"了");
     }
 
-    public static Meat callFactory(MeatMethodFactory factory){
-        return factory.orderMeat();
-    }
 }
