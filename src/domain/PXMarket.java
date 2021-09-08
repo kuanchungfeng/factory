@@ -16,6 +16,10 @@ public class PXMarket {
         buy(SimpleMeatFactory.orderBarbecue("雞肉").getName());
     }
 
+    public static void buyFish(){
+        buy(SimpleMeatFactory.orderBarbecue("魚肉").getName());
+    }
+
     public static void buy(String item){
         System.out.println("買到"+item+"了");
     }
