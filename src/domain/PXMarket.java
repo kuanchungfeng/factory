@@ -1,6 +1,8 @@
 package domain;
 
+import abstractFactory.AbstractFactory;
 import abstractFactory.DomesticFactory;
+import abstractFactory.ImportFactory;
 import factoryMethod.*;
 
 /**
@@ -10,12 +12,12 @@ public class PXMarket {
 
     // 烤肉組合包
     public static void barbecueItemSet(){
-        DomesticFactory domesticFactory = new DomesticFactory();
+        AbstractFactory factory = new ImportFactory();
         buy("烤肉架");
         buy("木炭");
-        buy(domesticFactory.supplyBeef().getName());
-        buy(domesticFactory.supplyChicken().getName());
-        buy(domesticFactory.supplyPork().getName());
+        buy(factory.supplyBeef().getName());
+        buy(factory.supplyChicken().getName());
+        buy(factory.supplyPork().getName());
 
     }
 

@@ -1,9 +1,7 @@
 package abstractFactory;
 
-import domain.Beef;
-import domain.Chicken;
-import domain.Fish;
-import domain.Pork;
+import domain.*;
+
 
 /**
  * @author Arthur on 2021/9/8
